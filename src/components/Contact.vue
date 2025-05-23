@@ -15,7 +15,7 @@
       <!-- Disable CAPTCHA -->
       <input type="hidden" name="_captcha" value="false">
       <!-- Redirect after submit -->
-      <input type="hidden" name="_next" value="https://tu-dominio-o-gracias.vercel.app">
+      <input type="hidden" name="_next" value="https://mi-portfolio-navy-phi.vercel.app/">
 
       <input
         type="text"
