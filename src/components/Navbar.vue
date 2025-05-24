@@ -4,7 +4,7 @@
            bg-white dark:bg-gray-900 shadow-md"
   >
     <nav class="container mx-auto px-4 flex justify-between items-center h-full">
-      <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Mi Portfolio</h1>
+      <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Guillermo López Argudo</h1>
       <ul class="flex space-x-6 list-none items-center">
         <li>
           <a
