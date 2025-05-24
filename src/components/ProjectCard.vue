@@ -1,15 +1,15 @@
 <template>
   <div
-    class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 text-left 
-           hover:shadow-lg"
+    class="bg-white dark:bg-gray-800 shadow rounded-lg p-4 sm:p-6 text-left 
+           hover:shadow-lg transition-shadow duration-300"
   >
-    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">
+    <h3 class="text-lg sm:text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">
       {{ title }}
     </h3>
-    <p class="text-gray-600 dark:text-gray-300 mb-4">
+    <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">
       {{ description }}
     </p>
-    <div class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+    <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-3 sm:mb-4">
       <span
         v-for="tech in technologies"
         :key="tech"
@@ -18,7 +18,7 @@
         {{ tech }}
       </span>
     </div>
-    <div class="flex space-x-4 text-sm">
+    <div class="flex space-x-3 sm:space-x-4 text-xs sm:text-sm">
       <a
         v-if="github"
         :href="github"

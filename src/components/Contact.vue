@@ -1,19 +1,19 @@
 <template>
   <section
     id="contact"
-    class="py-20 bg-white dark:bg-gray-900 text-center"
+    class="py-12 sm:py-20 bg-white dark:bg-gray-900 text-center px-4"
   >
-    <h2 class="text-4xl font-bold mb-6 text-blue-600 dark:text-blue-400">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-blue-600 dark:text-blue-400">
       Contacto
     </h2>
-    <p class="mb-10 text-gray-600 dark:text-gray-300 max-w-xl mx-auto text-lg">
+    <p class="mb-8 sm:mb-10 text-gray-600 dark:text-gray-300 max-w-xl mx-auto text-base sm:text-lg">
       ¿Te interesa colaborar o tienes alguna propuesta? ¡Escríbeme y estaré encantado de responderte!
     </p>
 
     <form
       action="https://formsubmit.co/9e871d2d4a772e0ed0e3115aabd72d9f"
       method="POST"
-      class="max-w-xl mx-auto space-y-5"
+      class="max-w-xl mx-auto space-y-4 sm:space-y-5"
     >
       <!-- Honeypot (oculto para bots) -->
       <input type="text" name="_honey" style="display: none" />
@@ -21,7 +21,7 @@
       <input
         type="hidden"
         name="_next"
-        value="https://mi-portfolio-navy-phi.vercel.app/"
+        value="https://mi-portfolio-guillermo-lopez.vercel.app/"
       />
 
       <input
@@ -29,38 +29,38 @@
         name="name"
         placeholder="Tu nombre"
         required
-        class="w-full px-5 py-3 border border-gray-300 dark:border-gray-600 rounded-md
+        class="w-full px-4 py-2 sm:px-5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md
                bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-               focus:outline-none focus:ring-2 focus:ring-blue-500"
+               focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
       />
       <input
         type="email"
         name="email"
         placeholder="Tu correo electrónico"
         required
-        class="w-full px-5 py-3 border border-gray-300 dark:border-gray-600 rounded-md
+        class="w-full px-4 py-2 sm:px-5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md
                bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-               focus:outline-none focus:ring-2 focus:ring-blue-500"
+               focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
       />
       <textarea
         name="message"
-        rows="5"
+        rows="4"
         placeholder="Tu mensaje..."
         required
-        class="w-full px-5 py-3 border border-gray-300 dark:border-gray-600 rounded-md
+        class="w-full px-4 py-2 sm:px-5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md
                bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-               focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+               focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-sm sm:text-base"
       ></textarea>
 
       <button
         type="submit"
-        class="w-full sm:w-auto bg-blue-600 dark:bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 font-medium shadow"
+        class="w-full bg-blue-600 dark:bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 font-medium shadow text-sm sm:text-base"
       >
         Enviar mensaje
       </button>
     </form>
 
-    <div class="mt-10 text-gray-600 dark:text-gray-400 text-sm space-y-2">
+    <div class="mt-8 sm:mt-10 text-gray-600 dark:text-gray-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
       <p>
         📧 Email:
         <a

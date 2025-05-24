@@ -1,11 +1,11 @@
 <template>
   <section
     id="projects"
-    class="py-16 bg-gray-100 dark:bg-gray-900 text-center"
+    class="py-12 sm:py-16 bg-gray-100 dark:bg-gray-900 text-center px-4"
   >
-    <h2 class="text-3xl font-bold mb-10 text-blue-600">Proyectos</h2>
+    <h2 class="text-3xl font-bold mb-8 sm:mb-10 text-blue-600 dark:text-blue-400">Proyectos</h2>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-4">
+    <div class="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
       <ProjectCard
         v-for="project in projects"
         :key="project.title"

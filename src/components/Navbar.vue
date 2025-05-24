@@ -1,51 +1,35 @@
 <template>
   <header
     class="fixed top-0 left-0 w-full z-50 h-16 flex items-center
-           bg-white dark:bg-gray-900 shadow-md"
+           bg-white dark:bg-gray-900 shadow-md px-4 sm:px-6"
   >
-    <nav class="container mx-auto px-4 flex justify-between items-center h-full">
-      <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Guillermo López Argudo</h1>
-      <ul class="flex space-x-6 list-none items-center">
+    <nav class="container mx-auto flex justify-between items-center h-full">
+      <h1 class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">Guillermo López Argudo</h1>
+      <button class="sm:hidden" @click="toggleMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <ul :class="['sm:flex sm:space-x-6 list-none items-center', menuOpen ? 'absolute top-16 left-0 right-0 bg-white dark:bg-gray-900 flex flex-col space-y-4 py-4 shadow-md' : 'hidden']">
         <li>
-          <a
-            href="#home"
-            class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 "
-            >Inicio</a
-          >
+          <a href="#home" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Inicio</a>
         </li>
         <li>
-          <a
-            href="#about"
-            class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 "
-            >Sobre mí</a
-          >
+          <a href="#about" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a>
         </li>
         <li>
-          <a
-            href="#projects"
-            class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 "
-            >Proyectos</a
-          >
+          <a href="#projects" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a>
         </li>
         <li>
-          <a
-            href="#contact"
-            class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 "
-            >Contacto</a
-          >
+          <a href="#contact" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contacto</a>
         </li>
-        <li>
-          <a
-            href="/CV-GuillermoLópezArgudo.pdf"
-            download
-            class="bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 dark:hover:bg-blue-600  text-sm font-medium"
-            >Descargar CV</a
-          >
+        <li class="px-4">
+          <a href="/CV-GuillermoLópezArgudo.pdf" download class="block bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 dark:hover:bg-blue-600 text-sm font-medium">Descargar CV</a>
         </li>
-        <li>
+        <li class="px-4">
           <button
             @click="toggleDarkMode"
-            class="ml-4 flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded px-3 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
+            class="flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded px-3 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
             :aria-label="isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
             title="Toggle Dark Mode"
           >
@@ -88,6 +72,7 @@
 import { ref, onMounted } from 'vue'
 
 const isDark = ref(false)
+const menuOpen = ref(false)
 
 onMounted(() => {
   isDark.value = document.documentElement.classList.contains('dark')
@@ -100,5 +85,9 @@ function toggleDarkMode() {
   } else {
     document.documentElement.classList.remove('dark')
   }
+}
+
+function toggleMenu() {
+  menuOpen.value = !menuOpen.value
 }
 </script>

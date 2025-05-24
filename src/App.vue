@@ -3,7 +3,7 @@
   <div
     class="font-sans text-gray-800 bg-gray-50 dark:bg-gray-900 dark:text-gray-100 min-h-screen pt-16"
   >
-    <main class="container mx-auto px-4 py-6 space-y-16">
+    <main class="container mx-auto px-4 py-6 space-y-12 sm:space-y-16">
       <Home />
       <About />
       <Projects />
