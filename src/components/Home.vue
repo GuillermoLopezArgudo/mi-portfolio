@@ -10,7 +10,7 @@
       <div class="flex justify-center lg:justify-start">
         <figure class="relative w-40 sm:w-48 md:w-56 lg:w-full max-w-[280px] xl:max-w-[320px]">
           <div
-            class="aspect-square overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-800 shadow-md"
+            class="aspect-square overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-md"
           >
             <img
               src="/miperfil.jpeg"
@@ -19,7 +19,7 @@
               height="640"
               decoding="async"
               fetchpriority="high"
-              class="h-full w-full object-cover object-[center_18%] scale-[1.02]"
+              class="h-full w-full object-cover object-top"
             />
           </div>
         </figure>
