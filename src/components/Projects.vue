@@ -52,7 +52,7 @@ const projects = [
       'SQLAlchemy'
     ],
     github: 'https://github.com/GuillermoLopezArgudo/balonmano-frontend',
-    demo: ''
+    demo: 'https://balonmano-frontend.vercel.app'
   },
   {
     title: 'receta-blog',
