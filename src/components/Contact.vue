@@ -62,7 +62,7 @@
 
     <div class="mt-8 sm:mt-10 text-gray-600 dark:text-gray-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
       <p>
-        📧 Email:
+        Email:
         <a
           href="mailto:guillermolopezargudo@gmail.com"
           class="text-blue-600 dark:text-blue-400 hover:underline"
@@ -71,15 +71,28 @@
         </a>
       </p>
       <p>
-        🔗 LinkedIn:
+        LinkedIn:
         <a
           href="https://www.linkedin.com/in/guillermo-l%C3%B3pez-argudo-5a716722b/"
           target="_blank"
+          rel="noopener noreferrer"
           class="text-blue-600 dark:text-blue-400 hover:underline"
         >
           /guillermo-lópez-argudo
         </a>
       </p>
+      <p>
+        GitHub:
+        <a
+          href="https://github.com/GuillermoLopezArgudo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          /GuillermoLopezArgudo
+        </a>
+      </p>
+      <p class="pt-1">Picassent, Valencia · Disponibilidad total · Carnet y coche propio</p>
     </div>
   </section>
 </template>

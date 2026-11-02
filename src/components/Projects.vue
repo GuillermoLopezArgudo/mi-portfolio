@@ -38,6 +38,22 @@ const projects = [
     ],
     github: 'https://github.com/GuillermoLopezArgudo/SaboresEspa-a',
     demo: 'http://48.217.185.80/'
+  },
+  {
+    title: 'mi-app',
+    description:
+      'Aplicación frontend en Vue 3. Proyecto reciente centrado en componentes, rutas y UI moderna.',
+    technologies: ['Vue 3', 'JavaScript'],
+    github: 'https://github.com/GuillermoLopezArgudo/mi-app',
+    demo: ''
+  },
+  {
+    title: 'receta-blog',
+    description:
+      'Blog de recetas desplegado en Vercel. Proyecto web con enfoque en frontend y publicación de contenido.',
+    technologies: ['JavaScript', 'Vercel'],
+    github: 'https://github.com/GuillermoLopezArgudo/receta-blog',
+    demo: 'https://receta-blog.vercel.app'
   }
 ]
 </script>
