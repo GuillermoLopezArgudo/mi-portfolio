@@ -1,84 +1,79 @@
 <template>
   <section
     id="home"
-    class="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center 
-           bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 px-4 py-16 sm:py-0"
+    class="min-h-[calc(100vh-4rem)] flex items-center py-12 sm:py-16 lg:py-20"
   >
-    <div class="text-center max-w-4xl mx-auto">
-      <div class="relative mx-auto mb-8 sm:mb-10 w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52">
-        <!-- Halo suave -->
-        <div
-          class="pointer-events-none absolute -inset-4 rounded-full bg-blue-500/20 dark:bg-blue-400/25 blur-2xl"
-          aria-hidden="true"
-        />
-        <!-- Anillo degradado -->
-        <div
-          class="absolute inset-0 rounded-full p-[3px] bg-gradient-to-br from-blue-500 via-sky-400 to-indigo-500 shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)] dark:shadow-[0_12px_40px_-10px_rgba(96,165,250,0.45)]"
-        >
-          <div class="h-full w-full rounded-full bg-gray-50 dark:bg-gray-900 p-1">
+    <div
+      class="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,280px)_minmax(0,1fr)] xl:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-8 sm:gap-10 lg:gap-14 items-center"
+    >
+      <!-- Foto -->
+      <div class="flex justify-center lg:justify-start">
+        <figure class="relative w-40 sm:w-48 md:w-56 lg:w-full max-w-[280px] xl:max-w-[320px]">
+          <div
+            class="aspect-square overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-800 shadow-md"
+          >
             <img
               src="/miperfil.jpeg"
               alt="Guillermo López Argudo"
-              class="profile-photo h-full w-full rounded-full object-cover object-[center_22%] ring-1 ring-white/70 dark:ring-white/10"
+              width="640"
+              height="640"
+              decoding="async"
+              fetchpriority="high"
+              class="h-full w-full object-cover object-[center_18%] scale-[1.02]"
             />
           </div>
-        </div>
+        </figure>
       </div>
 
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight text-gray-900 dark:text-gray-100">
-        Guillermo López Argudo
-      </h2>
+      <!-- Texto + CTAs -->
+      <div class="text-center lg:text-left min-w-0">
+        <p class="text-sm sm:text-base font-semibold tracking-wide text-blue-600 dark:text-blue-400 mb-2">
+          Full Stack Developer
+        </p>
 
-      <p class="text-lg sm:text-xl font-semibold text-blue-600 dark:text-blue-400 mb-3">
-        Full Stack Developer
-      </p>
+        <h2 class="text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-gray-50 mb-4 text-balance">
+          Guillermo López Argudo
+        </h2>
 
-      <p class="text-base sm:text-lg max-w-2xl mx-auto text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-        Especializado en <strong>Vue.js</strong> y <strong>Python</strong> (Flask / FastAPI).
-        Experiencia en APIs REST, bases de datos y despliegue en cloud (AWS, GCP, Azure).
-      </p>
+        <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed max-w-xl mx-auto lg:mx-0">
+          Especializado en <strong class="font-semibold text-gray-900 dark:text-white">Vue.js</strong>
+          y <strong class="font-semibold text-gray-900 dark:text-white">Python</strong> (Flask / FastAPI).
+          Experiencia en APIs REST, bases de datos y despliegue en cloud (AWS, GCP, Azure).
+        </p>
 
-      <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-8 sm:mb-10">
-        Picassent, Valencia · Presencial / híbrido / remoto · Coche propio
-      </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
+          <span class="inline-block">Picassent, Valencia</span>
+          <span class="mx-1.5 text-gray-300 dark:text-gray-600" aria-hidden="true">·</span>
+          <span class="inline-block">Presencial / híbrido / remoto</span>
+          <span class="mx-1.5 text-gray-300 dark:text-gray-600" aria-hidden="true">·</span>
+          <span class="inline-block">Coche propio</span>
+        </p>
 
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-        <a
-          href="#projects"
-          class="w-full sm:w-auto bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 text-center transition"
-        >
-          Ver mis proyectos
-        </a>
-        <a
-          href="https://www.linkedin.com/in/guillermo-l%C3%B3pez-argudo-5a716722b/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 hover:text-white dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:text-white text-center transition"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/GuillermoLopezArgudo"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w-full sm:w-auto bg-gray-900 text-white border-2 border-gray-900 px-6 py-3 rounded-full shadow-lg hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:border-gray-100 dark:hover:bg-gray-300 text-center transition"
-        >
-          GitHub
-        </a>
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3">
+          <a
+            href="#projects"
+            class="inline-flex items-center justify-center min-h-11 px-5 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition shadow-sm"
+          >
+            Ver mis proyectos
+          </a>
+          <a
+            href="https://www.linkedin.com/in/guillermo-l%C3%B3pez-argudo-5a716722b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center min-h-11 px-5 py-2.5 rounded-xl border border-blue-600 text-blue-600 text-sm font-semibold hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/40 transition"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/GuillermoLopezArgudo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center min-h-11 px-5 py-2.5 rounded-xl border border-gray-300 text-gray-800 text-sm font-semibold hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-800 transition"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-.profile-photo {
-  transition: transform 0.45s ease, filter 0.45s ease;
-}
-
-@media (hover: hover) {
-  .profile-photo:hover {
-    transform: scale(1.03);
-    filter: brightness(1.04) contrast(1.03);
-  }
-}
-</style>
