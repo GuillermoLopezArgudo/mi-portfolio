@@ -26,18 +26,19 @@ const projects = [
   {
     title: 'SaboresEspaña',
     description:
-      'Aplicación fullstack dockerizada para gestionar recetas y usuarios, con autenticación JWT.',
+      'Aplicación fullstack de recetas con autenticación JWT. Frontend en Vercel, API en Render y PostgreSQL en Neon.',
     technologies: [
       'Vue 3',
       'TailwindCSS',
       'Flask',
-      'MySQL',
+      'PostgreSQL',
       'Peewee',
-      'Docker',
-      'JWT'
+      'JWT',
+      'Vercel',
+      'Render'
     ],
     github: 'https://github.com/GuillermoLopezArgudo/SaboresEspa-a',
-    demo: 'http://48.217.185.80/'
+    demo: 'https://sabores-espana-one.vercel.app'
   },
   {
     title: 'App Balonmano',
