@@ -54,14 +54,6 @@ const projects = [
     ],
     github: 'https://github.com/GuillermoLopezArgudo/balonmano-frontend',
     demo: 'https://balonmano-frontend.vercel.app'
-  },
-  {
-    title: 'receta-blog',
-    description:
-      'Blog de recetas desplegado en Vercel. Proyecto web con enfoque en frontend y publicación de contenido.',
-    technologies: ['JavaScript', 'Vercel'],
-    github: 'https://github.com/GuillermoLopezArgudo/receta-blog',
-    demo: 'https://receta-blog.vercel.app'
   }
 ]
 </script>
