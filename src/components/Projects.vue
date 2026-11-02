@@ -40,11 +40,18 @@ const projects = [
     demo: 'http://48.217.185.80/'
   },
   {
-    title: 'mi-app',
+    title: 'App Balonmano',
     description:
-      'Aplicación frontend en Vue 3. Proyecto reciente centrado en componentes, rutas y UI moderna.',
-    technologies: ['Vue 3', 'JavaScript'],
-    github: 'https://github.com/GuillermoLopezArgudo/mi-app',
+      'Plataforma de gestión para clubes de balonmano: plantilla, partidos en directo, convocatoria, analítica, entrenamientos, cuotas y roles. Frontend en React y API en FastAPI con PostgreSQL.',
+    technologies: [
+      'React',
+      'Vite',
+      'FastAPI',
+      'PostgreSQL',
+      'JWT',
+      'SQLAlchemy'
+    ],
+    github: 'https://github.com/GuillermoLopezArgudo/balonmano-frontend',
     demo: ''
   },
   {
