@@ -1,66 +1,63 @@
 <template>
   <header
-    class="fixed top-0 left-0 w-full z-50 h-16 flex items-center
-           bg-white dark:bg-gray-900 shadow-md px-4 sm:px-6"
+    class="fixed top-0 inset-x-0 z-50 border-b border-[var(--line)] backdrop-blur-md
+           bg-[color-mix(in_srgb,var(--bg)_82%,transparent)]"
   >
-    <nav class="container mx-auto flex justify-between items-center h-full">
-      <h1 class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">Guillermo López Argudo</h1>
-      <button class="sm:hidden" @click="toggleMenu">
+    <nav
+      class="section-pad mx-auto max-w-[1400px] h-16 flex items-center justify-between gap-4"
+    >
+      <a
+        href="#home"
+        class="display text-sm sm:text-base font-bold tracking-tight text-[var(--ink)] hover:text-[var(--signal)] transition-colors"
+      >
+        GLA
+      </a>
+
+      <button
+        type="button"
+        class="sm:hidden p-2 -mr-2 text-[var(--ink)]"
+        aria-label="Abrir menú"
+        @click="menuOpen = !menuOpen"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7h16M4 12h16M4 17h10" />
         </svg>
       </button>
-      <ul :class="['sm:flex sm:space-x-6 list-none items-center', menuOpen ? 'absolute top-16 left-0 right-0 bg-white dark:bg-gray-900 flex flex-col space-y-4 py-4 shadow-md' : 'hidden']">
-        <li>
-          <a href="#home" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Inicio</a>
-        </li>
-        <li>
-          <a href="#about" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a>
-        </li>
-        <li>
-          <a href="#projects" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a>
-        </li>
-        <li>
-          <a href="#contact" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contacto</a>
-        </li>
-        <li class="px-4">
-          <a href="/CV-GuillermoLópezArgudo.pdf" download class="block bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 dark:hover:bg-blue-600 text-sm font-medium">Descargar CV</a>
-        </li>
-        <li class="px-4">
-          <button
-            @click="toggleDarkMode"
-            class="flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded px-3 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
-            :aria-label="isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
-            title="Toggle Dark Mode"
+
+      <ul
+        :class="[
+          'list-none items-center gap-1 sm:gap-2',
+          menuOpen
+            ? 'absolute top-16 left-0 right-0 flex flex-col py-4 px-5 border-b border-[var(--line)] bg-[var(--bg)] shadow-lift'
+            : 'hidden sm:flex',
+        ]"
+      >
+        <li v-for="link in links" :key="link.href">
+          <a
+            :href="link.href"
+            class="block px-3 py-2 text-sm text-[var(--mute)] hover:text-[var(--ink)] transition-colors"
+            @click="menuOpen = false"
           >
-            <svg
-              v-if="!isDark"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07 5.66l-.71-.71M6.34 6.34l-.71-.71m12.02 12.02l-.71-.71M6.34 17.66l-.71-.71M12 7a5 5 0 000 10 5 5 0 000-10z"
-              />
-            </svg>
-            <svg
-              v-else
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="0"
-            >
-              <path
-                d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"
-              />
-            </svg>
+            {{ link.label }}
+          </a>
+        </li>
+        <li class="sm:ml-2 flex items-center gap-2 px-3 sm:px-0 pt-2 sm:pt-0">
+          <a
+            href="/CV-GuillermoLópezArgudo.pdf"
+            download
+            class="inline-flex items-center justify-center min-h-10 px-4 text-sm font-semibold
+                   bg-[var(--ink)] text-[var(--bg)] hover:bg-[var(--signal)] hover:text-white transition-colors"
+          >
+            CV
+          </a>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center min-h-10 min-w-10 border border-[var(--line)]
+                   text-[var(--mute)] hover:text-[var(--ink)] hover:border-[var(--ink)] transition-colors"
+            :aria-label="isDark ? 'Modo claro' : 'Modo oscuro'"
+            @click="toggleDarkMode"
+          >
+            <span class="text-xs font-semibold tracking-wide">{{ isDark ? 'CL' : 'OS' }}</span>
           </button>
         </li>
       </ul>
@@ -74,20 +71,18 @@ import { ref, onMounted } from 'vue'
 const isDark = ref(false)
 const menuOpen = ref(false)
 
+const links = [
+  { href: '#about', label: 'Sobre mí' },
+  { href: '#projects', label: 'Proyectos' },
+  { href: '#contact', label: 'Contacto' },
+]
+
 onMounted(() => {
   isDark.value = document.documentElement.classList.contains('dark')
 })
 
 function toggleDarkMode() {
   isDark.value = !isDark.value
-  if (isDark.value) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-}
-
-function toggleMenu() {
-  menuOpen.value = !menuOpen.value
+  document.documentElement.classList.toggle('dark', isDark.value)
 }
 </script>

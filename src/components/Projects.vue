@@ -1,20 +1,29 @@
 <template>
   <section
     id="projects"
-    class="py-12 sm:py-16 bg-gray-100 dark:bg-gray-900 text-center px-4"
+    class="relative section-pad py-20 sm:py-28 border-t border-[var(--line)] bg-[var(--bg-elevated)]"
   >
-    <h2 class="text-3xl font-bold mb-8 sm:mb-10 text-blue-600 dark:text-blue-400">Proyectos</h2>
+    <div class="mx-auto max-w-[1400px]">
+      <div class="max-w-2xl mb-12 sm:mb-14">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--signal)] mb-3">
+          Proyectos
+        </p>
+        <h2 class="display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)] text-balance">
+          Trabajo que puedes abrir y probar.
+        </h2>
+      </div>
 
-    <div class="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-      <ProjectCard
-        v-for="project in projects"
-        :key="project.title"
-        :title="project.title"
-        :description="project.description"
-        :technologies="project.technologies"
-        :github="project.github"
-        :demo="project.demo"
-      />
+      <div class="grid gap-5 sm:gap-6 md:grid-cols-2">
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.title"
+          :title="project.title"
+          :description="project.description"
+          :technologies="project.technologies"
+          :github="project.github"
+          :demo="project.demo"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -26,34 +35,18 @@ const projects = [
   {
     title: 'SaboresEspaña',
     description:
-      'Aplicación fullstack de recetas con autenticación JWT. Frontend en Vercel, API en Render y PostgreSQL en Neon.',
-    technologies: [
-      'Vue 3',
-      'TailwindCSS',
-      'Flask',
-      'PostgreSQL',
-      'Peewee',
-      'JWT',
-      'Vercel',
-      'Render'
-    ],
+      'Recetario fullstack con autenticación JWT. Frontend en Vercel, API en Render y PostgreSQL en Neon.',
+    technologies: ['Vue 3', 'Tailwind', 'Flask', 'PostgreSQL', 'JWT', 'Vercel', 'Render'],
     github: 'https://github.com/GuillermoLopezArgudo/SaboresEspa-a',
-    demo: 'https://sabores-espana-one.vercel.app'
+    demo: 'https://sabores-espana-one.vercel.app',
   },
   {
     title: 'App Balonmano',
     description:
-      'Plataforma de gestión para clubes de balonmano: plantilla, partidos en directo, convocatoria, analítica, entrenamientos, cuotas y roles. Frontend en React y API en FastAPI con PostgreSQL.',
-    technologies: [
-      'React',
-      'Vite',
-      'FastAPI',
-      'PostgreSQL',
-      'JWT',
-      'SQLAlchemy'
-    ],
+      'Gestión de clubes: plantilla, partidos en directo, convocatoria, analítica, entrenamientos, cuotas y roles.',
+    technologies: ['React', 'Vite', 'FastAPI', 'PostgreSQL', 'JWT', 'SQLAlchemy'],
     github: 'https://github.com/GuillermoLopezArgudo/balonmano-frontend',
-    demo: 'https://balonmano-frontend.vercel.app'
-  }
+    demo: 'https://balonmano-frontend.vercel.app',
+  },
 ]
 </script>

@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg: #e8eef2;
+  --bg-elevated: #f4f7f9;
+  --mist: #d2dde6;
+  --ink: #0c1219;
+  --ink-soft: #1a2330;
+  --mute: #5c6b7a;
+  --line: rgba(12, 18, 25, 0.12);
+  --signal: #0f9b8e;
+  --signal-bright: #14b8a6;
+  --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+html.dark {
+  --bg: #0c1219;
+  --bg-elevated: #141c27;
+  --mist: #13202c;
+  --ink: #eef3f7;
+  --ink-soft: #d5dee7;
+  --mute: #8b9aab;
+  --line: rgba(238, 243, 247, 0.12);
+  --signal: #2dd4bf;
+  --signal-bright: #5eead4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--signal) 35%, transparent);
+  color: var(--ink);
+}
+
+.grain::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.045;
+  background-image: var(--grain);
+  mix-blend-mode: multiply;
+}
+
+html.dark .grain::before {
+  opacity: 0.08;
+  mix-blend-mode: soft-light;
+}
+
+.section-pad {
+  @apply px-5 sm:px-8 lg:px-12;
+}
+
+.display {
+  font-family: 'Syne', system-ui, sans-serif;
+}
+
+.hero-atmosphere {
+  background:
+    radial-gradient(
+      90% 70% at 15% 20%,
+      color-mix(in srgb, var(--signal) 18%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      var(--bg) 0%,
+      color-mix(in srgb, var(--signal) 8%, var(--bg)) 45%,
+      var(--mist) 100%
+    );
+}
+
+html.dark .hero-atmosphere {
+  background:
+    radial-gradient(
+      80% 60% at 20% 10%,
+      color-mix(in srgb, var(--signal) 22%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(160deg, #0c1219 0%, #13202c 55%, #0f1a24 100%);
+}

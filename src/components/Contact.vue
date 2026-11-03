@@ -1,98 +1,103 @@
 <template>
-  <section
-    id="contact"
-    class="py-12 sm:py-20 bg-white dark:bg-gray-900 text-center px-4"
-  >
-    <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-blue-600 dark:text-blue-400">
-      Contacto
-    </h2>
-    <p class="mb-8 sm:mb-10 text-gray-600 dark:text-gray-300 max-w-xl mx-auto text-base sm:text-lg">
-      ¿Te interesa colaborar o tienes alguna propuesta? ¡Escríbeme y estaré encantado de responderte!
-    </p>
+  <section id="contact" class="relative section-pad py-20 sm:py-28 border-t border-[var(--line)]">
+    <div class="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div>
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--signal)] mb-3">
+          Contacto
+        </p>
+        <h2 class="display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)] mb-5 text-balance">
+          Cuéntame qué tienes entre manos.
+        </h2>
+        <p class="text-base sm:text-lg text-[var(--mute)] leading-relaxed mb-8 max-w-md">
+          Picassent, Valencia · Presencial, híbrido o remoto · Carnet y coche propio.
+        </p>
+        <ul class="space-y-3 list-none text-sm sm:text-base">
+          <li>
+            <a
+              href="mailto:guillermolopezargudo@gmail.com"
+              class="text-[var(--ink)] hover:text-[var(--signal)] transition-colors font-medium"
+            >
+              guillermolopezargudo@gmail.com
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/guillermo-l%C3%B3pez-argudo-5a716722b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[var(--mute)] hover:text-[var(--signal)] transition-colors"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/GuillermoLopezArgudo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[var(--mute)] hover:text-[var(--signal)] transition-colors"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
 
-    <form
-      action="https://formsubmit.co/9e871d2d4a772e0ed0e3115aabd72d9f"
-      method="POST"
-      class="max-w-xl mx-auto space-y-4 sm:space-y-5"
-    >
-      <!-- Honeypot (oculto para bots) -->
-      <input type="text" name="_honey" style="display: none" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input
-        type="hidden"
-        name="_next"
-        value="https://mi-portfolio-guillermo-lopez.vercel.app/"
-      />
-
-      <input
-        type="text"
-        name="name"
-        placeholder="Tu nombre"
-        required
-        class="w-full px-4 py-2 sm:px-5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md
-               bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-               focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Tu correo electrónico"
-        required
-        class="w-full px-4 py-2 sm:px-5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md
-               bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-               focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-      />
-      <textarea
-        name="message"
-        rows="4"
-        placeholder="Tu mensaje..."
-        required
-        class="w-full px-4 py-2 sm:px-5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md
-               bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-               focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-sm sm:text-base"
-      ></textarea>
-
-      <button
-        type="submit"
-        class="w-full bg-blue-600 dark:bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 font-medium shadow text-sm sm:text-base"
+      <form
+        action="https://formsubmit.co/9e871d2d4a772e0ed0e3115aabd72d9f"
+        method="POST"
+        class="space-y-4"
       >
-        Enviar mensaje
-      </button>
-    </form>
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://mi-portfolio-guillermo-lopez.vercel.app/"
+        />
 
-    <div class="mt-8 sm:mt-10 text-gray-600 dark:text-gray-400 text-xs sm:text-sm space-y-1 sm:space-y-2">
-      <p>
-        Email:
-        <a
-          href="mailto:guillermolopezargudo@gmail.com"
-          class="text-blue-600 dark:text-blue-400 hover:underline"
+        <label class="block">
+          <span class="sr-only">Nombre</span>
+          <input
+            type="text"
+            name="name"
+            placeholder="Tu nombre"
+            required
+            class="w-full min-h-12 px-4 border border-[var(--line)] bg-transparent text-[var(--ink)]
+                   placeholder:text-[var(--mute)] focus:outline-none focus:border-[var(--signal)] transition-colors"
+          />
+        </label>
+        <label class="block">
+          <span class="sr-only">Email</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="Tu correo"
+            required
+            class="w-full min-h-12 px-4 border border-[var(--line)] bg-transparent text-[var(--ink)]
+                   placeholder:text-[var(--mute)] focus:outline-none focus:border-[var(--signal)] transition-colors"
+          />
+        </label>
+        <label class="block">
+          <span class="sr-only">Mensaje</span>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Tu mensaje"
+            required
+            class="w-full px-4 py-3 border border-[var(--line)] bg-transparent text-[var(--ink)]
+                   placeholder:text-[var(--mute)] focus:outline-none focus:border-[var(--signal)]
+                   resize-y min-h-[140px] transition-colors"
+          />
+        </label>
+        <button
+          type="submit"
+          class="inline-flex items-center justify-center min-h-12 px-8 text-sm font-semibold
+                 bg-[var(--ink)] text-[var(--bg)] hover:bg-[var(--signal)] hover:text-white transition-colors"
         >
-          guillermolopezargudo@gmail.com
-        </a>
-      </p>
-      <p>
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/guillermo-l%C3%B3pez-argudo-5a716722b/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          /guillermo-lópez-argudo
-        </a>
-      </p>
-      <p>
-        GitHub:
-        <a
-          href="https://github.com/GuillermoLopezArgudo"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          /GuillermoLopezArgudo
-        </a>
-      </p>
-      <p class="pt-1">Picassent, Valencia · Disponibilidad total · Carnet y coche propio</p>
+          Enviar mensaje
+        </button>
+      </form>
     </div>
   </section>
 </template>
