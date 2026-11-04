@@ -15,9 +15,30 @@
           APIs REST, bases de datos y despliegue en cloud.
         </p>
         <p class="text-base sm:text-lg text-[var(--mute)] leading-relaxed">
-          Busco equipos de producto o consultoría en Valencia (presencial / híbrido) o remoto.
-          Perfil resolutivo, con foco en modernizar apps y mejorar procesos DevOps.
+          Busco equipos de producto o consultoría. Perfil resolutivo, con foco en modernizar apps
+          y mejorar procesos DevOps.
         </p>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 max-w-2xl">
+          <div>
+            <h3 class="display text-sm font-bold tracking-wide uppercase text-[var(--ink)] mb-2">
+              Idiomas
+            </h3>
+            <ul class="space-y-1 list-none text-sm sm:text-base text-[var(--mute)]">
+              <li><strong class="text-[var(--ink)]">Español</strong> — nativo</li>
+              <li><strong class="text-[var(--ink)]">Valenciano</strong> — nativo</li>
+              <li><strong class="text-[var(--ink)]">Inglés</strong> — A2</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="display text-sm font-bold tracking-wide uppercase text-[var(--ink)] mb-2">
+              Disponibilidad
+            </h3>
+            <p class="text-sm sm:text-base text-[var(--mute)] leading-relaxed">
+              Incorporación inmediata · presencial / híbrido en Valencia o remoto · carnet y coche propio
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- Stack: one job — technical map -->
@@ -84,7 +105,7 @@
 const stack = [
   {
     title: 'Frontend',
-    items: 'Vue.js, Vue 3, Pinia, React, React Native, JavaScript, TypeScript, HTML5, CSS3, Tailwind',
+    items: 'Vue.js, Vue 3, Pinia, React, React Native, JavaScript, TypeScript, HTML5, CSS3, Tailwind, WordPress, Elementor',
   },
   {
     title: 'Backend',
@@ -106,7 +127,14 @@ const jobs = [
     company: 'Mvisual',
     period: 'Julio 2026 – Septiembre 2026',
     detail:
-      'Apps con Vue.js y Flask, APIs REST, PostgreSQL / MySQL / MongoDB y despliegue en GCP. Modernización de componentes y mejora DevOps.',
+      'Apps con Vue.js, Flask y Laravel (PHP), APIs REST, PostgreSQL / MySQL / MongoDB y despliegue en GCP. Participación en la app móvil y dashboard de Mes Que Falles (React Native), mantenimiento y mejora de Rawena (Laravel / React), modernización de componentes y mejora DevOps.',
+  },
+  {
+    role: 'Desarrollador Web – Full Stack',
+    company: 'EDF',
+    period: '2025 · 9 meses',
+    detail:
+      'Desarrollo y mantenimiento frontend/backend, bases de datos y evolución de aplicaciones existentes. Desarrollé SaboresEspaña (Vue 3, Flask, PostgreSQL) y lo desplegué en Azure, dockerizando una máquina virtual.',
   },
   {
     role: 'Full-Stack Developer',
@@ -116,17 +144,11 @@ const jobs = [
       'Vue.js y Flask, React / React Native, PHP y FastAPI. SQL y MongoDB, AWS EC2 y automatización DevOps.',
   },
   {
-    role: 'Desarrollador Web – Full Stack',
-    company: 'EDF',
-    period: '2025 · 9 meses',
-    detail:
-      'Desarrollo y mantenimiento frontend/backend, bases de datos y evolución de aplicaciones existentes.',
-  },
-  {
     role: 'Desarrollador Web',
     company: 'Mark & Brand',
     period: '2022 · 9 meses',
-    detail: 'Sitios corporativos, catálogos digitales y CRM/ERP con Odoo.',
+    detail:
+      'Sitios corporativos y catálogos digitales con WordPress y Elementor, y CRM/ERP con Odoo.',
   },
 ]
 </script>

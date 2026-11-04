@@ -10,7 +10,11 @@
       {{ description }}
     </p>
     <ul class="flex flex-wrap gap-x-3 gap-y-1 list-none mb-6 text-xs text-[var(--mute)]">
-      <li v-for="tech in technologies" :key="tech" class="after:content-['·'] after:ml-3 last:after:content-none after:opacity-40">
+      <li
+        v-for="tech in technologies"
+        :key="tech"
+        class="after:content-['·'] after:ml-3 last:after:content-none after:opacity-40"
+      >
         {{ tech }}
       </li>
     </ul>

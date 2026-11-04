@@ -9,7 +9,7 @@
           Cuéntame qué tienes entre manos.
         </h2>
         <p class="text-base sm:text-lg text-[var(--mute)] leading-relaxed mb-8 max-w-md">
-          Picassent, Valencia · Presencial, híbrido o remoto · Carnet y coche propio.
+          Picassent, Valencia.
         </p>
         <ul class="space-y-3 list-none text-sm sm:text-base">
           <li>

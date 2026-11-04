@@ -10,7 +10,8 @@
         href="#home"
         class="display text-sm sm:text-base font-bold tracking-tight text-[var(--ink)] hover:text-[var(--signal)] transition-colors"
       >
-        GLA
+        <span class="hidden sm:inline">Guillermo López Argudo</span>
+        <span class="sm:hidden">Guillermo</span>
       </a>
 
       <button
@@ -57,7 +58,40 @@
             :aria-label="isDark ? 'Modo claro' : 'Modo oscuro'"
             @click="toggleDarkMode"
           >
-            <span class="text-xs font-semibold tracking-wide">{{ isDark ? 'CL' : 'OS' }}</span>
+            <!-- Sol (activar oscuro) -->
+            <svg
+              v-if="!isDark"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.75"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v1.5M12 19.5V21M4.5 12H3m18 0h-1.5M6.34 6.34l-1.06-1.06m13.44 13.44-1.06-1.06M17.66 6.34l1.06-1.06M6.34 17.66l-1.06 1.06M12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5z"
+              />
+            </svg>
+            <!-- Luna creciente (activar claro) -->
+            <svg
+              v-else
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.75"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+              />
+            </svg>
           </button>
         </li>
       </ul>

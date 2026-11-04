@@ -35,15 +35,15 @@ const projects = [
   {
     title: 'SaboresEspaña',
     description:
-      'Recetario fullstack con autenticación JWT. Frontend en Vercel, API en Render y PostgreSQL en Neon.',
+      'Recetario fullstack con autenticación JWT. Ahora en Vercel + Render (PostgreSQL en Neon); en EDF se desplegó en Azure con Docker.',
     technologies: ['Vue 3', 'Tailwind', 'Flask', 'PostgreSQL', 'JWT', 'Vercel', 'Render'],
     github: 'https://github.com/GuillermoLopezArgudo/SaboresEspa-a',
     demo: 'https://sabores-espana-one.vercel.app',
   },
   {
-    title: 'App Balonmano',
+    title: 'Siete',
     description:
-      'Gestión de clubes: plantilla, partidos en directo, convocatoria, analítica, entrenamientos, cuotas y roles.',
+      'Proyecto propio de gestión para clubes de balonmano: plantilla, partidos en directo, convocatoria, analítica, entrenamientos, cuotas y roles.',
     technologies: ['React', 'Vite', 'FastAPI', 'PostgreSQL', 'JWT', 'SQLAlchemy'],
     github: 'https://github.com/GuillermoLopezArgudo/balonmano-frontend',
     demo: 'https://balonmano-frontend.vercel.app',
