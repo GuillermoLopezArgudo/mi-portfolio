@@ -48,23 +48,22 @@
         </div>
       </div>
 
-      <!-- Full-bleed portrait plane -->
-      <div class="relative order-1 lg:order-2 min-h-[42vh] sm:min-h-[48vh] lg:min-h-full -mx-5 sm:-mx-8 lg:mx-0 lg:-mr-12 xl:mr-[calc(-50vw+700px)]">
-        <div class="absolute inset-0 overflow-hidden animate-fade">
-          <img
-            src="/miperfil.jpeg"
-            alt="Guillermo López Argudo"
-            width="960"
-            height="1200"
-            decoding="async"
-            fetchpriority="high"
-            class="h-full w-full object-cover object-[center_18%] scale-[1.02] transition-transform duration-[1.4s] ease-out hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[var(--bg)] lg:via-transparent lg:to-transparent opacity-90 lg:opacity-70"
-            aria-hidden="true"
-          />
-        </div>
+      <!-- Portrait -->
+      <div
+        class="relative order-1 lg:order-2 flex items-center justify-center
+               py-8 sm:py-12 lg:py-16 animate-fade"
+      >
+        <img
+          src="/miperfil.jpeg"
+          alt="Guillermo López Argudo"
+          width="960"
+          height="1200"
+          decoding="async"
+          fetchpriority="high"
+          class="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px]
+                 max-h-[52vh] lg:max-h-[62vh] object-cover object-[center_20%]
+                 transition-transform duration-[1.4s] ease-out hover:scale-[1.03]"
+        />
       </div>
     </div>
   </section>
